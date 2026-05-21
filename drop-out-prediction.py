@@ -847,7 +847,7 @@ elif page == "🔮 Predict Student":
         <div style="font-size:2rem;font-weight:800;background:linear-gradient(90deg,#63b3ed,#9f7aea);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
             🔮 Predict Student Outcome
         </div>
-        <div style="color:#94a3b8;margin-top:6px;">Fill in student details to get an XGBoost-powered prediction</div>
+        <div style="color:#94a3b8;margin-top:6px;">Fill in student details to get prediction</div>
     </div>
     """, unsafe_allow_html=True)
 
