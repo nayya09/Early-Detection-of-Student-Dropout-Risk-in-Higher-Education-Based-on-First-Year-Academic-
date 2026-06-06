@@ -676,7 +676,7 @@ if page == "🏠 Overview":
              background:linear-gradient(90deg,#f6ad55,#fbd38d);"></div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
           <span style="font-size:1.4rem;">⚡</span>
-          <span style="font-size:0.8rem;color:#94a3b8;font-weight:600;">At Risk</span>
+          <span style="font-size:0.8rem;color:#94a3b8;font-weight:600;">On Going</span>
         </div>
         <div style="font-size:2.2rem;font-weight:800;background:linear-gradient(90deg,#f6ad55,#fbd38d);
              -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1;">
@@ -718,7 +718,7 @@ if page == "🏠 Overview":
         )
         legend_items = [
             ('🟢 Low Risk', graduate_count, '#68d391', f'{graduate_pct:.1f}%'),
-            ('🟡 At Risk',  enrolled_count,  '#f6ad55', f'{enrolled_pct:.1f}%'),
+            ('🟡 On Going',  enrolled_count,  '#f6ad55', f'{enrolled_pct:.1f}%'),
             ('🔴 Dropout',  dropout_count,   '#fc8181', f'{dropout_pct:.1f}%'),
         ]
         for i, (lbl, cnt, clr, pct) in enumerate(legend_items):
@@ -771,7 +771,7 @@ if page == "🏠 Overview":
         totals[totals == 0] = 1
 
         ax2.barh(y_pos, gr_v/totals*100, color='#68d391', height=0.55, label='Low Risk')
-        ax2.barh(y_pos, en_v/totals*100, color='#f6ad55', height=0.55, label='At Risk',
+        ax2.barh(y_pos, en_v/totals*100, color='#f6ad55', height=0.55, label='On Going',
                  left=gr_v/totals*100)
         ax2.barh(y_pos, do_v/totals*100, color='#fc8181', height=0.55, label='Dropout',
                  left=(gr_v+en_v)/totals*100)
@@ -1000,7 +1000,7 @@ elif page == "📋 Batch Predict":
                     <div class="metric-card" style="--accent-line:linear-gradient(90deg,#f6ad55,#fbd38d);--accent-grad:linear-gradient(90deg,#f6ad55,#fbd38d);">
                         <div class="metric-icon">📚</div>
                         <div class="metric-value">{pred_counts.get('Enrolled',0)}</div>
-                        <div class="metric-label">PREDICTED AT RISK ({en_pct:.0%})</div>
+                        <div class="metric-label">PREDICTED On Going ({en_pct:.0%})</div>
                     </div>
                     <div class="metric-card" style="--accent-line:linear-gradient(90deg,#68d391,#9ae6b4);--accent-grad:linear-gradient(90deg,#68d391,#9ae6b4);">
                         <div class="metric-icon">🏆</div>
@@ -1051,7 +1051,7 @@ elif page == "ℹ️ About":
         <div class="info-card">
             <h4>🎯 Purpose</h4>
             <p>EduPredict is an AI-powered early warning system that uses machine learning to identify 
-            students at risk of dropping out — enabling timely intervention by educators and counselors.</p>
+            students On Going of dropping out — enabling timely intervention by educators and counselors.</p>
         </div>
         <div class="info-card">
             <h4>📊 Dataset</h4>
